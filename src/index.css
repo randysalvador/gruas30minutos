@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@theme {
+  --color-asfalto: #0f172a;
+  --color-carril: #1e293b;
+  --color-guarnicion: #334155;
+  --color-senal: #ffb800;
+  --color-alerta: #ff6b00;
+  --color-pintura: #f8fafc;
+  --color-niebla: #cbd5e1;
+  --color-wa: #25d366;
+  --color-wa-ink: #052e16;
+
+  --font-display: "Barlow Condensed", "Arial Narrow", "Roboto Condensed", sans-serif;
+  --font-sans: "Barlow", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-asfalto text-pintura font-sans antialiased;
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--color-senal);
+    outline-offset: 3px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@utility pb-safe {
+  padding-bottom: max(0.75rem, env(safe-area-inset-bottom));
+}
+
+/* Línea de carril discontinua: el hilo visual que une los pasos. */
+@utility lane-line {
+  background-image: repeating-linear-gradient(
+    to bottom,
+    var(--color-senal) 0 28px,
+    transparent 28px 52px
+  );
+}
+
+@utility lane-line-x {
+  background-image: repeating-linear-gradient(
+    to right,
+    var(--color-senal) 0 28px,
+    transparent 28px 52px
+  );
+}
