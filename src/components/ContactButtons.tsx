@@ -19,7 +19,7 @@ export function CallButton({ size = "lg", label, sublabel, className = "" }: Pro
   return (
     <a
       href={SITE_CONFIG.telHref}
-      className={`${base} ${sizes[size]} bg-alerta text-asfalto hover:bg-[#ff7d1f] ${className}`}
+      className={`${base} ${sizes[size]} bg-alerta text-tinta hover:bg-[#ff7d1f] ${className}`}
       aria-label={`Llamar al ${SITE_CONFIG.phoneFormatted}`}
     >
       <Phone aria-hidden className="size-[1.15em] shrink-0" strokeWidth={2.5} />

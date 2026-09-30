@@ -1,42 +1,49 @@
 <!doctype html>
 <html lang="es-MX">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <title>Grúas 24/7 en CDMX | Llegada en 30 minutos | Grúas 30 Minutos</title>
-    <meta
-      name="description"
-      content="Grúa y auxilio vial 24 horas en CDMX: arrastre, paso de corriente, cambio de llanta y gasolina. Coyoacán, Tlalpan, Xochimilco, Roma e Iztapalapa. Llama al 56 6403 3469."
-    />
-    <meta name="theme-color" content="#0F172A" />
-    
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="canonical" href="https://www.gruas30minutos.com/" />
-    <meta property="og:type" content="website" />
-    <meta property="og:locale" content="es_MX" />
-    <meta property="og:url" content="https://www.gruas30minutos.com/" />
-    <meta property="og:title" content="Grúas 30 Minutos CDMX | Grúa y auxilio vial 24/7" />
-    <meta
-      property="og:description"
-      content="¿Te quedaste varado? Llama o manda WhatsApp y te confirmamos costo y tiempo de llegada al momento."
-    />
-    <meta property="og:image" content="https://www.gruas30minutos.com/og-image.jpg" />
-    <meta name="twitter:card" content="summary_large_image" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Grúas 24/7 en CDMX | Llegada en 30 minutos | Grúas 30 Minutos</title>
+  <meta name="description"
+    content="Grúa y auxilio vial 24 horas en CDMX: arrastre, paso de corriente, cambio de llanta y gasolina. Coyoacán, Tlalpan, Xochimilco, Roma e Iztapalapa. Llama al 55 2709 3155." />
+  <meta name="theme-color" content="#f3f5f8" />
+  <script>
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem("tema"); } catch (e) { }
+      if (t !== "light" && t !== "dark") {
+        t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      }
+      document.documentElement.dataset.theme = t;
+      document.querySelector('meta[name="theme-color"]').setAttribute("content", t === "dark" ? "#1b2230" : "#f3f5f8");
+    })();
+  </script>
 
-    <script type="application/ld+json">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="canonical" href="https://www.gruas30minutos.com/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_MX" />
+  <meta property="og:url" content="https://www.gruas30minutos.com/" />
+  <meta property="og:title" content="Grúas 30 Minutos CDMX | Grúa y auxilio vial 24/7" />
+  <meta property="og:description"
+    content="¿Te quedaste varado? Llama o manda WhatsApp y te confirmamos costo y tiempo de llegada al momento." />
+  <meta property="og:image" content="https://www.gruas30minutos.com/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+
+  <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "AutomotiveBusiness",
         "name": "Grúas 30 Minutos CDMX",
         "url": "https://www.gruas30minutos.com/",
-        "telephone": "+52-56-6403-3469",
+        "telephone": "+52-55-2709-3155",
         "priceRange": "$$",
         "address": {
           "@type": "PostalAddress",
@@ -56,9 +63,11 @@
         }
       }
     </script>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+
 </html>

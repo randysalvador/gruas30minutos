@@ -1,19 +1,50 @@
 @import "tailwindcss";
 
+/*
+ * Colores semánticos: cambian según el tema.
+ * Los valores de @theme son los del modo claro; el modo oscuro los
+ * sobrescribe más abajo con [data-theme="dark"].
+ */
 @theme {
-  --color-asfalto: #0f172a;
-  --color-carril: #1e293b;
-  --color-guarnicion: #334155;
+  /* Superficies y texto (varían por tema) */
+  --color-fondo: #f3f5f8;
+  --color-superficie: #e6eaf0;
+  --color-tarjeta: #ffffff;
+  --color-borde: #cbd3dd;
+  --color-texto: #152033;
+  --color-suave: #4a5568;
+  --color-acento: #8f5400; /* amarillo oscurecido: legible sobre fondo claro */
+  --color-vivo: #047857;
+
+  /* Marca (iguales en ambos temas) */
   --color-senal: #ffb800;
   --color-alerta: #ff6b00;
-  --color-pintura: #f8fafc;
-  --color-niebla: #cbd5e1;
+  --color-tinta: #0f172a; /* texto sobre amarillo/naranja */
   --color-wa: #25d366;
   --color-wa-ink: #052e16;
 
   --font-display: "Barlow Condensed", "Arial Narrow", "Roboto Condensed", sans-serif;
   --font-sans: "Barlow", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
+
+/* Modo oscuro: gris carbón en lugar del azul casi negro anterior */
+:root[data-theme="dark"] {
+  --color-fondo: #1b2230;
+  --color-superficie: #232c3b;
+  --color-tarjeta: #2c3647;
+  --color-borde: #3b4759;
+  --color-texto: #f2f5f9;
+  --color-suave: #c0c9d6;
+  --color-acento: #ffb800;
+  --color-vivo: #6ee7b7;
+  color-scheme: dark;
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+}
+
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
 
 @layer base {
   html {
@@ -23,11 +54,14 @@
   }
 
   body {
-    @apply bg-asfalto text-pintura font-sans antialiased;
+    @apply bg-fondo text-texto font-sans antialiased;
+    transition:
+      background-color 0.2s ease,
+      color 0.2s ease;
   }
 
   :focus-visible {
-    outline: 3px solid var(--color-senal);
+    outline: 3px solid var(--color-alerta);
     outline-offset: 3px;
   }
 

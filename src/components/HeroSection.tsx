@@ -52,7 +52,7 @@ export default function HeroSection() {
             ¿Necesitas una grúa en menos de 30&nbsp;minutos?
           </h1>
 
-          <p className="mt-5 max-w-xl text-lg leading-relaxed text-niebla sm:text-xl">
+          <p className="mt-5 max-w-xl text-lg leading-relaxed text-suave sm:text-xl">
             Servicio rápido, seguro y confiable 24/7 en CDMX y zonas de cobertura. Te decimos el
             costo y el tiempo de llegada antes de salir.
           </p>
@@ -62,14 +62,14 @@ export default function HeroSection() {
             <WhatsappButton className="sm:flex-1" />
           </div>
 
-          <p className="mt-3 text-sm text-niebla">
+          <p className="mt-3 text-sm text-suave">
             Al enviar WhatsApp te pediremos permiso para adjuntar tu ubicación. Si no la
             compartes, puedes escribirla en el mensaje.
           </p>
 
-          <p className="mt-6 font-display text-2xl font-semibold text-pintura">
-            <span className="text-niebla">Línea directa: </span>
-            <a href={SITE_CONFIG.telHref} className="text-senal underline-offset-4 hover:underline">
+          <p className="mt-6 font-display text-2xl font-semibold text-texto">
+            <span className="text-suave">Línea directa: </span>
+            <a href={SITE_CONFIG.telHref} className="text-acento underline-offset-4 hover:underline">
               {SITE_CONFIG.phoneFormatted}
             </a>
           </p>

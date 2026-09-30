@@ -1,9 +1,9 @@
 export const SITE_CONFIG = {
   brand: "Grúas 30 Minutos CDMX",
-  phone: "5664033469",
-  phoneFormatted: "56 6403 3469",
-  telHref: "tel:+525664033469",
-  whatsappNumber: "525664033469",
+  phone: "5527093155",
+  phoneFormatted: "55 2709 3155",
+  telHref: "tel:+525527093155",
+  whatsappNumber: "525527093155",
   whatsappMessage: "Hola, necesito una grúa urgente. Mi ubicación es: ",
   zones: [
     "Coyoacán",

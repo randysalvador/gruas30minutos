@@ -23,7 +23,7 @@ export default function HowItWorks() {
         <h2 id="como-titulo" className="font-display text-4xl font-bold sm:text-5xl">
           Cómo funciona
         </h2>
-        <p className="mt-3 max-w-xl text-lg text-niebla">Tres pasos entre la llamada y la grúa.</p>
+        <p className="mt-3 max-w-xl text-lg text-suave">Tres pasos entre la llamada y la grúa.</p>
 
         <div className="relative mt-12">
           {/* Línea de carril que une los pasos: el único momento animado de la página */}
@@ -56,7 +56,7 @@ export default function HowItWorks() {
               >
                 <span
                   aria-hidden
-                  className="grid size-[60px] shrink-0 place-items-center rounded-full border-4 border-asfalto bg-senal font-display text-3xl font-extrabold text-asfalto outline-2 outline-senal"
+                  className="grid size-[60px] shrink-0 place-items-center rounded-full border-4 border-fondo bg-senal font-display text-3xl font-extrabold text-tinta outline-2 outline-senal"
                 >
                   {i + 1}
                 </span>
@@ -65,7 +65,7 @@ export default function HowItWorks() {
                     <span className="sr-only">Paso {i + 1}: </span>
                     {step.title}
                   </h3>
-                  <p className="mt-2 max-w-xs text-base leading-relaxed text-niebla">{step.text}</p>
+                  <p className="mt-2 max-w-xs text-base leading-relaxed text-suave">{step.text}</p>
                 </div>
               </motion.li>
             ))}
